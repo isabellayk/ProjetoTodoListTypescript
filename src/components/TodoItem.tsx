@@ -1,4 +1,5 @@
 
+
 import type { Todo } from '../types/Todo';
 
 interface TodoItemProps {
@@ -22,7 +23,7 @@ const TodoItem = ({ tarefas, onToggle, onDelete }: TodoItemProps) => {
                     checked={tarefas.completado}
                     onChange={() => onToggle(tarefas.id)}
                 />
-                <span>{tarefas.completado ? "text-slate-500" : "text-slate-200"}
+                <span className={tarefas.completado ? "text-slate-500" : "text-slate-200"}>
                     {tarefas.text}
                 </span>
             </div>
